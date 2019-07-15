@@ -1,0 +1,9 @@
+[Unit]
+Description=djangoteam
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'cd /opt/noob/noobs/; /root/.virtualenvs/noob/bin/python manage.py runserver 0:8080  1>/var/log/django-team.log 2>&1'
+
+[Install]
+WantedBy=multi-user.target
